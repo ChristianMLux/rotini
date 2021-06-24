@@ -4,4 +4,65 @@
 
 html {
   font-family: "Baloo 2", cursive;
+  font-size: 18px;
+}
+
+body {
+  --primary-color: #a778db;
+  --primary-var-color: #caaeea;
+  --secondary-color: #acdb76;
+  --background-color: #fafafa;
+  --basic-font-color: #121212;
+  --secondary-font-color: #fafafa;
+  --secondary-bg-color: #121212;
+  --shadow-color: #a0a0a0;
+  margin: 0 auto;
+  background-color: var(--background-color);
+  color: var(--basic-font-color);
+}
+main {
+  margin: 0 auto;
+  width: 70%;
+}
+.main-header {
+  color: var(--secondary-font-color);
+  background-color: var(--secondary-bg-color);
+  display: flex;
+  justify-content: center;
+}
+.main-nav {
+  display: flex;
+  justify-content: center;
+}
+.main-nav > a {
+  transition: text-decoration 0.5s;
+  margin: 0 0.5rem 0 0.5rem;
+  padding: 0.125rem 0.5rem 0rem 0.5rem;
+  font-size: 1.125rem;
+  color: var(--secondary-font-color);
+  text-decoration: underline dotted var(--shadow-color);
+}
+.main-nav > a::first-letter {
+  font-weight: bold;
+  color: var(--shadow-color);
+}
+.main-nav > a:hover::first-letter {
+  color: var(--primary-color);
+}
+.main-nav > a:hover {
+  text-decoration: underline dotted var(--primary-color);
+  _background-color: var(--shadow-color);
+}
+.main-heading {
+  display: inline-block;
+  margin: 0;
+  padding: 0.45rem;
+}
+.main-heading::first-letter {
+  color: var(--primary-color);
+  font-size: 2.25rem;
+}
+.main-subheading {
+  display: inline-block;
+  margin-left: 1rem;
 }
