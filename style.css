@@ -59,7 +59,7 @@ main {
 .main-heading {
   display: inline-block;
   margin: 0;
-  padding: 0.5rem 0.5rem 0.125rem 2rem;
+  padding: 0.5rem 0.5rem 0.125rem 0.75rem;
 }
 .main-heading::first-letter {
   color: var(--primary-color);
@@ -70,12 +70,44 @@ main {
   margin-left: 1rem;
 }
 
-@media screen and (max-width: 500px) {
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  width: 100%;
+  max-width: 3.5rem;
+  height: auto;
+  transform: translate(1rem, 1rem);
+}
+
+@media screen and (min-width: 529px) {
+  .page-subtitle {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 528px) {
   html {
     font-size: 16px;
   }
   .main-nav {
     flex-direction: column;
     text-align: center;
+  }
+  .main-subheading {
+    display: none;
+  }
+  .page-subtitle {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+  }
+  .main-heading {
+    margin-top: 0;
+    padding-top: 0;
   }
 }
