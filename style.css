@@ -23,7 +23,7 @@ body {
 main {
   margin: 0 auto;
   width: 100%;
-  max-width: 500px;
+  max-width: 756px;
 }
 
 /*Grid*/
@@ -31,12 +31,13 @@ main {
 .grid-container {
   display: grid;
   grid-auto-rows: minmax(8.8125rem, auto);
+  _grid-gap: 1rem;
 }
 .grid-container > div {
-  border: 1px solid hotpink;
   background-size: cover;
   display: flex;
   align-items: flex-start;
+  border-bottom: dotted 0.5px var(--primary-color);
 }
 .grid-container {
   grid-template-columns: repeat(2, 1fr);
@@ -96,6 +97,8 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 2rem;
+  _border-top: dotted 0.5px var(--primary-color);
 }
 .footer {
   width: 100%;
@@ -108,11 +111,26 @@ footer {
   max-width: 3.5rem;
   height: auto;
   transform: translate(1rem, 1rem);
+  align-items: flex-end;
 }
 
 @media screen and (min-width: 529px) {
   .page-subtitle {
     display: none;
+  }
+  .content {
+    padding: 0.5rem 1rem 0.5rem 0rem;
+  }
+  .grid-item-3 {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 2rem;
+  }
+
+  .grid-item-4 {
+    display: flex;
+    justify-content: flex-start;
+    padding-top: 2rem;
   }
 }
 
