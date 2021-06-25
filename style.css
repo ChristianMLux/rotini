@@ -22,8 +22,30 @@ body {
 }
 main {
   margin: 0 auto;
-  width: 70%;
+  width: 100%;
+  max-width: 500px;
 }
+
+/*Grid*/
+
+.grid-container {
+  display: grid;
+  grid-auto-rows: minmax(8.8125rem, auto);
+}
+.grid-container > div {
+  border: 1px solid hotpink;
+  background-size: cover;
+  display: flex;
+  align-items: flex-start;
+}
+.grid-container {
+  grid-template-columns: repeat(2, 1fr);
+}
+.grid-container .grid-item-1 {
+  grid-column: 1/-1;
+  grid-row: span 2;
+}
+
 .main-header {
   color: var(--secondary-font-color);
   background-color: var(--secondary-bg-color);
@@ -75,6 +97,11 @@ footer {
   justify-content: center;
   align-items: center;
 }
+.footer {
+  width: 100%;
+  max-width: 19rem;
+  height: auto;
+}
 
 .logo {
   width: 100%;
@@ -92,6 +119,9 @@ footer {
 @media screen and (max-width: 528px) {
   html {
     font-size: 16px;
+  }
+  main {
+    width: 95%;
   }
   .main-nav {
     flex-direction: column;
