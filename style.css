@@ -53,10 +53,13 @@ main {
   text-decoration: underline dotted var(--primary-color);
   _background-color: var(--shadow-color);
 }
+.main-nav > a:focus {
+  text-decoration: underline dotted var(--primary-color);
+}
 .main-heading {
   display: inline-block;
   margin: 0;
-  padding: 0.45rem;
+  padding: 0.5rem 0.5rem 0.125rem 2rem;
 }
 .main-heading::first-letter {
   color: var(--primary-color);
@@ -65,4 +68,14 @@ main {
 .main-subheading {
   display: inline-block;
   margin-left: 1rem;
+}
+
+@media screen and (max-width: 500px) {
+  html {
+    font-size: 16px;
+  }
+  .main-nav {
+    flex-direction: column;
+    text-align: center;
+  }
 }
